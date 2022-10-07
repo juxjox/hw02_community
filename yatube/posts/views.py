@@ -3,8 +3,11 @@ from django.http import HttpResponse
 from .models import Post, Group
 
 
+RECENT_POSTS = 10
+
+
 def index(request):
-    posts = Post.objects.order_by("-pub_date")[:10]
+    posts = Post.objects.all()[:RECENT_POSTS]
     context = {
         "posts": posts,
     }
@@ -13,7 +16,7 @@ def index(request):
 
 def group_posts(request, slug):
     group = get_object_or_404(Group, slug=slug)
-    posts = Post.objects.filter(group=group).order_by("-pub_date")[:10]
+    posts = Post.objects.filter(group=group)[:RECENT_POSTS]
     context = {
         "group": group,
         "posts": posts,
