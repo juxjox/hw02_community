@@ -8,5 +8,5 @@ urlpatterns = [
     # Главная страница
     path("", views.index, name="index"),
     # Отдельная страница сообщества
-    path("group/<slug:slug>/", views.group_posts, name="group_list"),
+    path("group/<slug:slug>/", views.posts, name="group_list"),
 ]
