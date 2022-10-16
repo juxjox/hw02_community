@@ -32,5 +32,8 @@ class Post(models.Model):
         verbose_name="Сообщество",
     )
 
+    def __str__(self):
+        return self.text
+
     class Meta:
         ordering = ["-pub_date"]
