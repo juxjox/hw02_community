@@ -1,0 +1,73 @@
+<!-- templates/about/tech.html -->
+{% extends "base.html" %}
+{% block title %}Технологии{% endblock %}
+{% block content %}
+
+<div class="row">
+  <h1>Вот что я умею</h1>
+  {% comment %}
+    Боковой блок со списком технологий 
+    Займет всю ширину блока на мобильном
+    и 25% при размерах экрана ≥768px
+  {% endcomment %}
+  <aside class="col-12 col-md-3">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        Python
+      </li>
+      <li class="list-group-item">
+        Django
+      </li>
+      <li class="list-group-item">
+        HTML
+      </li>
+      <li class="list-group-item">
+        CSS Bootstrap
+      </li>
+    </ul>
+  </aside>
+  {% comment %}
+    Статья  
+    Займет всю ширину блока на мобильном
+    и 75% при размерах экрана ≥768px
+  {% endcomment %}
+  <article class="col-12 col-md-9">
+    <p>Мой первый проект на Django — это микс из Django, Python и простой HTML-верстки с CSS Bootstrap. 
+        Основная идея сайта — это интерактивная блог-платформа, в которой пользователи могут
+        регистрироваться, создавать записи и вступать в сообщества.
+        <p> Для разработки я использую Google Chrome, но на сайте используется Firefox.
+        В проекте я использую следующие модули:</p>
+        <p></p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" aria-current="true">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">django-tables2</h5>
+                <small>3 days ago</small>
+              </div>
+              <p class="mb-1">Для создания динамического списка данных, которые могут быть легко модифицированы пользователем. </p>
+              <small class="text-muted">And some small print.</small>
+           
+            <li class="list-group-item">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">django-bootstrap-table</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">Для отображения данных из базы данных.</p>
+              <small class="text-muted">And some muted small print.</small>
+            
+            <li class="list-group-item">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">django-nbs-bootstrap</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">Для применения стилей Bootstrap в проекте.</p>
+              <small class="text-muted">And some muted small print.</small>
+            
+          </div>
+
+
+
+  </article>
+</div>
+
+{% endblock %} 

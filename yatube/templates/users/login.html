@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Войти{% endblock %}
 {% block content %}
+{% load user_filters %}
   <div class="row justify-content-center">
     <div class="col-md-8 p-5">
       <div class="card">
@@ -8,7 +9,6 @@
           Войти на сайт
         </div>
         <div class="card-body">
-        {% load user_filters %}
           {% if form.errors %}
               {% for field in form %}
                 {% for error in field.errors %}            
@@ -45,8 +45,8 @@
                     <span class="required text-danger">*</span>
                   {% endif %}
               </label>
-              <div class="col-md-6">
               {{ field|addclass:'form-control' }} 
+              <div class="col-md-6">
                 {% if field.help_text %}
                   <small id="{{ field.id_for_label }}-help" class="form-text text-muted">
                     {{ field.help_text|safe }}
@@ -69,4 +69,5 @@
     </div> <!-- card -->
   </div> <!-- col -->
 </div> <!-- row -->
+
 {% endblock %} 
